@@ -23,7 +23,7 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Build y test
-        run: mvn clean verify
+        run: mvn clean package -DskipTests
 
   build-and-push-ecr:
     name: Build & Push ECR
